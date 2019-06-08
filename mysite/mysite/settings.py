@@ -29,21 +29,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-CKEDITOR_BASEPATH = "/my_static/ckeditor/ckeditor/"
-CKEDITOR_UPLOAD_PATH = "uploads/"
-CKEDITOR_CONFIGS = {
-    'awesome_ckeditor': {
-        'toolbar': 'Basic',
-    },
-    'default': {
-        'toolbar': None,
-    }
-}
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+
+
 # Application definition
 
 INSTALLED_APPS = [
-    'ckeditor',
-    'ckeditor_uploader',
+    'django_summernote',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
